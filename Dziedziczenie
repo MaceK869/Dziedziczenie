@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+class uczen
+{
+    int osoba();
+    int nauczyciel();
+    string imie,nazwisko;
+    
+public:
+    void wprowadz();
+    void wypisz();
+};
+
+//...... tu body funkcji:
+
+
+class uczen : public osoba
+{
+    string klasa;
+    int numer_dziennika;
+   public:
+    void wypisz_ucznia()
+    {
+       cout << klasa << " " << numer_dziennika;
+        wypisz();
+         }
+    void wprowadz()
+    {
+    }
+};
+
+int main()
+{
+    uczen u1;
+    u1.wprowadz();
+    u1.wypisz_ucznia();
+}
+    return 0;
+};
